@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -14,8 +13,28 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Build with Gradle
+    - name: Build with Gradle grpc-be
       working-directory: ./grpc-be
+      run:
+        ./gradlew build
+    - name: Build with Gradle grpc-fe
+      working-directory: ./grpc-fe
+      run:
+        ./gradlew build
+    - name: Build with Gradle grpc-stream-be
+      working-directory: ./grpc-stream-be
+      run:
+        ./gradlew build
+    - name: Build with Gradle grpc-stream-fe
+      working-directory: ./grpc-stream-fe
+      run:
+        ./gradlew build
+    - name: Build with Gradle http-be
+      working-directory: ./http-be
+      run:
+        ./gradlew build
+    - name: Build with Gradle http-fe
+      working-directory: ./http-fe
       run:
         ./gradlew build
 
