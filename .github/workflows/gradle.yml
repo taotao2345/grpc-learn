@@ -17,6 +17,11 @@ jobs:
       working-directory: ./grpc-be
       run:
         ./gradlew build
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: grpc-be
+        path: grpc-be/build
     - name: Build with Gradle grpc-fe
       working-directory: ./grpc-fe
       run:
@@ -37,6 +42,3 @@ jobs:
       working-directory: ./http-fe
       run:
         ./gradlew build
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v1.0.0
