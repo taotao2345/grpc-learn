@@ -1,4 +1,4 @@
-package taotao.grpcbe;
+package taotao.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -30,25 +30,25 @@ public final class GreeterGrpc {
   public static final String SERVICE_NAME = "Greeting.Greeter";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<taotao.grpcbe.Message,
-      taotao.grpcbe.Reply> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<taotao.grpc.Message,
+      taotao.grpc.Reply> getGetMethod;
 
-  public static io.grpc.MethodDescriptor<taotao.grpcbe.Message,
-      taotao.grpcbe.Reply> getGetMethod() {
-    io.grpc.MethodDescriptor<taotao.grpcbe.Message, taotao.grpcbe.Reply> getGetMethod;
+  public static io.grpc.MethodDescriptor<taotao.grpc.Message,
+      taotao.grpc.Reply> getGetMethod() {
+    io.grpc.MethodDescriptor<taotao.grpc.Message, taotao.grpc.Reply> getGetMethod;
     if ((getGetMethod = GreeterGrpc.getGetMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getGetMethod = GreeterGrpc.getGetMethod) == null) {
           GreeterGrpc.getGetMethod = getGetMethod = 
-              io.grpc.MethodDescriptor.<taotao.grpcbe.Message, taotao.grpcbe.Reply>newBuilder()
+              io.grpc.MethodDescriptor.<taotao.grpc.Message, taotao.grpc.Reply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "Greeting.Greeter", "get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  taotao.grpcbe.Message.getDefaultInstance()))
+                  taotao.grpc.Message.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  taotao.grpcbe.Reply.getDefaultInstance()))
+                  taotao.grpc.Reply.getDefaultInstance()))
                   .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("get"))
                   .build();
           }
@@ -92,8 +92,8 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void get(taotao.grpcbe.Message request,
-        io.grpc.stub.StreamObserver<taotao.grpcbe.Reply> responseObserver) {
+    public void get(taotao.grpc.Message request,
+        io.grpc.stub.StreamObserver<taotao.grpc.Reply> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -103,8 +103,8 @@ public final class GreeterGrpc {
             getGetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                taotao.grpcbe.Message,
-                taotao.grpcbe.Reply>(
+                taotao.grpc.Message,
+                taotao.grpc.Reply>(
                   this, METHODID_GET)))
           .build();
     }
@@ -136,8 +136,8 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void get(taotao.grpcbe.Message request,
-        io.grpc.stub.StreamObserver<taotao.grpcbe.Reply> responseObserver) {
+    public void get(taotao.grpc.Message request,
+        io.grpc.stub.StreamObserver<taotao.grpc.Reply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -169,7 +169,7 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public taotao.grpcbe.Reply get(taotao.grpcbe.Message request) {
+    public taotao.grpc.Reply get(taotao.grpc.Message request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -201,8 +201,8 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<taotao.grpcbe.Reply> get(
-        taotao.grpcbe.Message request) {
+    public com.google.common.util.concurrent.ListenableFuture<taotao.grpc.Reply> get(
+        taotao.grpc.Message request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
@@ -228,8 +228,8 @@ public final class GreeterGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET:
-          serviceImpl.get((taotao.grpcbe.Message) request,
-              (io.grpc.stub.StreamObserver<taotao.grpcbe.Reply>) responseObserver);
+          serviceImpl.get((taotao.grpc.Message) request,
+              (io.grpc.stub.StreamObserver<taotao.grpc.Reply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -253,7 +253,7 @@ public final class GreeterGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return taotao.grpcbe.Greeting.getDescriptor();
+      return taotao.grpc.Greeting.getDescriptor();
     }
 
     @java.lang.Override

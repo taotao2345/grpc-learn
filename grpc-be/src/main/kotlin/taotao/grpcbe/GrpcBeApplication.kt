@@ -4,6 +4,9 @@ import io.grpc.stub.StreamObserver
 import org.lognet.springboot.grpc.GRpcService
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import taotao.grpc.GreeterGrpc
+import taotao.grpc.Message
+import taotao.grpc.Reply
 
 @SpringBootApplication
 class GrpcBeApplication
