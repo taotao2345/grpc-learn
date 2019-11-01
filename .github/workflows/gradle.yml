@@ -15,8 +15,8 @@ jobs:
         java-version: 1.8
 
     - name: Build with Gradle
-      run: |
-        cd ./grpc-be
+      working-directory: ./grpc-be
+      run:
         ./gradlew build
 
     - name: Upload artifact
