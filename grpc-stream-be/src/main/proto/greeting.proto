@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "taotao.grpc";
+option java_outer_classname = "Greeting";
+
+package Greeting;
+
+// The greeting service definition.
+service Greeter {
+    // Sends a greeting
+    rpc get (Message) returns (Reply) {}
+    rpc list (Message) returns (stream Reply) {}
+}
+
+// The request message containing the user's name.
+message Message {
+    string text = 1;
+}
+
+// The response message containing the greetings.
+message Reply {
+    string message = 1;
+}
