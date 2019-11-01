@@ -1,0 +1,13 @@
+package taotao.grpcbe
+
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
+
+@SpringBootTest
+class GrpcBeApplicationTests {
+
+    @Test
+    fun contextLoads() {
+    }
+
+}
