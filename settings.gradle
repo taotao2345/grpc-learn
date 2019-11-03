@@ -1,0 +1,2 @@
+rootProject.name = "grpc-learn"
+include "grpc-be", "grpc-fe", "grpc-stream-be", "grpc-stream-fe", "http-be", "http-fe"
